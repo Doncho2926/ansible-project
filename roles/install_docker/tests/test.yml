@@ -1,5 +1,7 @@
 ---
-- hosts: localhost
-  remote_user: root
+- name: Run install_docker role (test)
+  hosts: localhost
+  become: true
   roles:
-    - roles/install_docker
+    - install_docker
+    
