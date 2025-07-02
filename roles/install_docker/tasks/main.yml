@@ -43,7 +43,7 @@
 
 - name: Install docker-compose
   ansible.builtin.get_url:
-    url: https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-`uname -s`-`uname -m`
+    url: https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-Linux-x86_64
     dest: /usr/local/bin/docker-compose
     mode: '0755'
 
