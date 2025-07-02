@@ -5,5 +5,4 @@
   roles:
     - install_docker
     - run_nginx_website
-
     

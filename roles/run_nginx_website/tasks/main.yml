@@ -27,4 +27,4 @@
   ansible.builtin.command:
     cmd: docker compose up -d
     chdir: /opt/nginx-site
-
+    
