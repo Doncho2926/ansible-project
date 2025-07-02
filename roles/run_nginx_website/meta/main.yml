@@ -1,7 +1,7 @@
 ---
-  alaxy_info:
+galaxy_info:
   author: Doncho2926
-  description: Install Docker and Docker Compose on Ubuntu.
+  description: Run nginx in Docker container
   company: ""
   license: MIT
   min_ansible_version: '2.9'
