@@ -1,0 +1,6 @@
+- name: Test install_docker role
+  hosts: localhost
+  become: yes
+  roles:
+    - install_docker
+    - run_nginx_website

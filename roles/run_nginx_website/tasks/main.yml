@@ -1,0 +1,29 @@
+---
+- name: Create project directory for nginx site
+  ansible.builtin.file:
+    path: /opt/nginx-site
+    state: directory
+    mode: '0755'
+
+- name: Copy docker-compose file
+  ansible.builtin.copy:
+    src: docker-compose.yml
+    dest: /opt/nginx-site/docker-compose.yml
+    mode: '0644'
+
+- name: Create html directory for website content
+  ansible.builtin.file:
+    path: /opt/nginx-site/html
+    state: directory
+    mode: '0755'
+
+- name: Copy index.html to html directory
+  ansible.builtin.copy:
+    src: index.html
+    dest: /opt/nginx-site/html/index.html
+    mode: '0644'
+
+- name: Run docker-compose
+  ansible.builtin.command: docker compose up -d
+  args:
+    chdir: /opt/nginx-site
