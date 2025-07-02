@@ -1,8 +1,7 @@
 ---
-- name: Run project roles
+- name: Run install_docker and run_nginx_website roles
   hosts: localhost
   become: true
   roles:
     - install_docker
     - run_nginx_website
-    
